@@ -1,4 +1,7 @@
-filterpy
+filterpy~=1.4.5
+numpy~=1.20.0
+Cython
+watchdog
 easydict==1.9
 effdet==0.2.1
 matplotlib==3.3.4
@@ -16,3 +19,9 @@ torch==1.7.1
 torchvision==0.8.2
 tqdm==4.56.0
 xmltodict==0.12.0
+opencv-python~=4.5.1.48
+scikit-image~=0.18.1
+requests
+seaborn
+torchaudio
+environs~=9.3.1
