@@ -3,4 +3,4 @@ from src.apllication.manager.manager import Manager
 
 config = Configuration('.env')
 manager = Manager(config=config)
-manager.process()
+manager.run()

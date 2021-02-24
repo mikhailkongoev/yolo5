@@ -20,7 +20,7 @@ def put_text(
         text: str,
         coords: Tuple[int, int],
         font_face=cv2.FONT_HERSHEY_SIMPLEX,
-        font_scale=1,
+        font_scale=0.7,
         color=(255, 255, 255),
         thickness: int = 2,
         line_type=cv2.LINE_AA,
