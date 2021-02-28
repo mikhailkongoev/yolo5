@@ -172,7 +172,7 @@ class Manager:
 
                     speed = (speed_10 + speed_11 + speed_12 + speed_13 + speed_14) / 5
                     history[track_id][count_frame]['speed'] = speed
-                    put_text(frame, str("%.3f" % speed) + 'm/s', (box[0], box[1]))
+                    put_text(frame, str("%.3f".format() % speed) + 'm/s', (box[0], box[1]))
 
                 if self.config.markup_visualize:
                     self.visualize_markup(frame)
