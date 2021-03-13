@@ -15,6 +15,16 @@ def draw_rectangle(img: np.ndarray, box: Union[Tuple, List], color: Tuple = (255
     return img
 
 
+def draw_polygon(img: np.ndarray, points: List[Union[Tuple, List]], color: Tuple = (0, 0, 255), thickness: int = 3):
+    img = cv2.polylines(
+        img,
+        pts=np.int32([points]),
+        color=color, thickness=thickness, isClosed=True
+    )
+
+    return img
+
+
 def put_text(
         img: np.ndarray,
         text: str,
