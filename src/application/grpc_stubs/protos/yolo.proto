@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package yolo;
+
+service YOLO {
+  rpc ProcessFrame(Frame) returns (InferenceResult) {}
+}
+
+message Frame {
+  bytes input_frame = 1;
+  int64 frame_num = 2;
+  int64 height = 3;
+  int64 width = 4;
+}
+
+message InferenceResult {
+  bytes result_frame = 1;
+  int64 height = 2;
+  int64 width = 3;
+  repeated Bbox bbox = 4;
+}
+
+message Bbox {
+  string class = 1;
+  int64 top = 2;
+  int64 left = 3;
+  int64 bottom = 4;
+  int64 right = 5;
+}

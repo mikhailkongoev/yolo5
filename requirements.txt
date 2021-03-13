@@ -25,3 +25,6 @@ requests
 seaborn
 torchaudio
 environs~=9.3.1
+grpcio-tools==1.33.2
+grpcio==1.33.2
+pytest
