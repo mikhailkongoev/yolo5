@@ -1,5 +1,5 @@
 import numpy as np
-# from ensemble_boxes import nms
+from ensemble_boxes import nms
 
 
 def nms_boxes(boxes, confs, img_shape, labels):
@@ -7,7 +7,7 @@ def nms_boxes(boxes, confs, img_shape, labels):
     boxes[:, 1] /= img_shape[0]
     boxes[:, 3] /= img_shape[0]
     boxes[:, 2] /= img_shape[1]
-    # boxes, confs, labels = nms([boxes], [confs], [labels], iou_thr=0.01)
+    boxes, confs, labels = nms([boxes], [confs], [labels], iou_thr=0.01)
     boxes[:, 0] *= img_shape[1]
     boxes[:, 1] *= img_shape[0]
     boxes[:, 2] *= img_shape[1]
